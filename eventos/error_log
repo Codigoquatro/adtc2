@@ -1,0 +1,28 @@
+[28-Oct-2023 15:28:13 America/Fortaleza] PHP Warning:  Undefined variable $linhas in /home2/codig267/public_html/adtc2/eventos/tela_alterar_eventos.php on line 69
+[28-Oct-2023 15:28:13 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home2/codig267/public_html/adtc2/eventos/tela_alterar_eventos.php on line 69
+[28-Oct-2023 15:28:13 America/Fortaleza] PHP Warning:  Undefined variable $linhas in /home2/codig267/public_html/adtc2/eventos/tela_alterar_eventos.php on line 75
+[28-Oct-2023 15:28:13 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home2/codig267/public_html/adtc2/eventos/tela_alterar_eventos.php on line 75
+[28-Oct-2023 15:28:13 America/Fortaleza] PHP Warning:  Undefined variable $linhas in /home2/codig267/public_html/adtc2/eventos/tela_alterar_eventos.php on line 82
+[28-Oct-2023 15:28:13 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home2/codig267/public_html/adtc2/eventos/tela_alterar_eventos.php on line 82
+[28-Oct-2023 15:28:13 America/Fortaleza] PHP Warning:  Undefined variable $linhas in /home2/codig267/public_html/adtc2/eventos/tela_alterar_eventos.php on line 114
+[28-Oct-2023 15:28:13 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home2/codig267/public_html/adtc2/eventos/tela_alterar_eventos.php on line 114
+[28-Oct-2023 15:28:17 America/Fortaleza] PHP Warning:  Undefined variable $linhas in /home2/codig267/public_html/adtc2/eventos/tela_alterar_eventos.php on line 69
+[28-Oct-2023 15:28:17 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home2/codig267/public_html/adtc2/eventos/tela_alterar_eventos.php on line 69
+[28-Oct-2023 15:28:17 America/Fortaleza] PHP Warning:  Undefined variable $linhas in /home2/codig267/public_html/adtc2/eventos/tela_alterar_eventos.php on line 75
+[28-Oct-2023 15:28:17 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home2/codig267/public_html/adtc2/eventos/tela_alterar_eventos.php on line 75
+[28-Oct-2023 15:28:17 America/Fortaleza] PHP Warning:  Undefined variable $linhas in /home2/codig267/public_html/adtc2/eventos/tela_alterar_eventos.php on line 82
+[28-Oct-2023 15:28:17 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home2/codig267/public_html/adtc2/eventos/tela_alterar_eventos.php on line 82
+[28-Oct-2023 15:28:17 America/Fortaleza] PHP Warning:  Undefined variable $linhas in /home2/codig267/public_html/adtc2/eventos/tela_alterar_eventos.php on line 114
+[28-Oct-2023 15:28:17 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home2/codig267/public_html/adtc2/eventos/tela_alterar_eventos.php on line 114
+[28-Oct-2023 15:28:24 America/Fortaleza] PHP Warning:  Undefined variable $linhas in /home2/codig267/public_html/adtc2/eventos/tela_alterar_eventos.php on line 69
+[28-Oct-2023 15:28:24 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home2/codig267/public_html/adtc2/eventos/tela_alterar_eventos.php on line 69
+[28-Oct-2023 15:28:24 America/Fortaleza] PHP Warning:  Undefined variable $linhas in /home2/codig267/public_html/adtc2/eventos/tela_alterar_eventos.php on line 75
+[28-Oct-2023 15:28:24 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home2/codig267/public_html/adtc2/eventos/tela_alterar_eventos.php on line 75
+[28-Oct-2023 15:28:24 America/Fortaleza] PHP Warning:  Undefined variable $linhas in /home2/codig267/public_html/adtc2/eventos/tela_alterar_eventos.php on line 82
+[28-Oct-2023 15:28:24 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home2/codig267/public_html/adtc2/eventos/tela_alterar_eventos.php on line 82
+[28-Oct-2023 15:28:24 America/Fortaleza] PHP Warning:  Undefined variable $linhas in /home2/codig267/public_html/adtc2/eventos/tela_alterar_eventos.php on line 114
+[28-Oct-2023 15:28:24 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home2/codig267/public_html/adtc2/eventos/tela_alterar_eventos.php on line 114
+[28-Oct-2023 15:32:48 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home2/codig267/public_html/adtc2/eventos/procedimento_alterar_eventos.php on line 19
+[28-Oct-2023 15:32:48 America/Fortaleza] PHP Warning:  Undefined array key "situacao" in /home2/codig267/public_html/adtc2/eventos/procedimento_alterar_eventos.php on line 24
+[28-Oct-2023 15:37:11 America/Fortaleza] PHP Warning:  Undefined array key "situacao" in /home2/codig267/public_html/adtc2/eventos/procedimento_alterar_eventos.php on line 24
+[28-Oct-2023 15:37:44 America/Fortaleza] PHP Warning:  Undefined array key "situacao" in /home2/codig267/public_html/adtc2/eventos/procedimento_alterar_eventos.php on line 24
