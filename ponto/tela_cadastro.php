@@ -70,7 +70,7 @@ if ($resultado) {
 </head>
 <body>
   <nav class="navbar navbar-dark bg-dark">
-    <a href="https://codigoquatro.com.br/adtc2/index.php" class="navbar-brand">Associar QRCode</a>
+    <a href="../index.php" class="navbar-brand">Associar QRCode</a>
   </nav>
   <div class="container">
    <form novalidate class="needs-validation" action="procedimento_cad_ponto.php"  method="POST" enctype="multipart/form-data">

@@ -151,6 +151,12 @@ require_once "db/config.php";
                 </a>
               </li>
               <li class="nav-item">
+                <a href="ponto/tela_gerarQRcode.php" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ponto</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="sair.php" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Sair</p>
