@@ -32,7 +32,7 @@
 
             scanner.addListener('scan', function (content) {
                 // Redireciona para o arquivo PHP com o conteúdo lido do QR code
-                window.location.href = 'caminho/para/seu/arquivo.php?conteudo=' + encodeURIComponent(content);
+                window.location.href = 'lista_chamadas.php?conteudo=' + encodeURIComponent(content);
             });
 
             Instascan.Camera.getCameras().then(function (cameras) {
