@@ -29,6 +29,7 @@
         document.addEventListener('DOMContentLoaded', function () {
             let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
 
+
             scanner.addListener('scan', function (content) {
                 // Redireciona para o arquivo PHP com o conteúdo lido do QR code
                 window.location.href = 'caminho/para/seu/arquivo.php?conteudo=' + encodeURIComponent(content);
