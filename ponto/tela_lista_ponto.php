@@ -19,7 +19,7 @@ $porPagina = 10; // Quantidade de resultados por página
 $paginaAtual = isset($_GET['pagina']) ? $_GET['pagina'] : 1; // Página atual, padrão é 1
 
 // Consulta total de registros
-$totalRegistros = $pdo->query("SELECT COUNT(*) FROM patrimonio")->fetchColumn();
+$totalRegistros = $pdo->query("SELECT COUNT(*) FROM ponto")->fetchColumn();
 
 // Cálculo para determinar o número total de páginas
 $totalPaginas = ceil($totalRegistros / $porPagina);
@@ -28,7 +28,7 @@ $totalPaginas = ceil($totalRegistros / $porPagina);
 $indiceInicio = ($paginaAtual - 1) * $porPagina;
 
 // Consulta com LIMIT para a paginação
-$sql = "SELECT * FROM patrimonio LIMIT $indiceInicio, $porPagina";
+$sql = "SELECT * FROM ponto LIMIT $indiceInicio, $porPagina";
 $query = $pdo->query($sql);
 ?>
     <style>
@@ -100,8 +100,8 @@ $query = $pdo->query($sql);
 </head>
 
 <div class="container">
-    <h1>Controle Patrimônio</h1>
-    <a href="tela_cadastro.php">Tela Cadastro</a>
+    <h1>Controle QRcode</h1>
+    <a href="buscar.php">Tela Cadastro</a>
     <hr style="border:1px solid #008000;">
 
     <div class="row">
@@ -110,14 +110,13 @@ $query = $pdo->query($sql);
                 <table class="table table-hover">
                     <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>Descrição</th>
-                        <th>Quantidade</th>
+                        <th>Matricula</th>
+                        <th>Nome</th>
+                        <th>Funcao</th>
                         <th>Congragação</th>
                         <th>Data Cadastro</th>
                         <th>Imagem</th>
-                        <th>Excluir</th>
-                        <th>Alterar</th>
+                        <th>Excluir</th>                        
                     </tr>
                     </thead>
                     <tbody>
@@ -126,19 +125,16 @@ $query = $pdo->query($sql);
                         foreach ($query->fetchAll() as $linhas) {
                             ?>
                             <tr>
-                                <td><?php echo $linhas['id_patrimonio']; ?></td>
-                                <td><?php echo $linhas['descricao']; ?></td>
-                                <td><?php echo $linhas['qtde']; ?></td>
+                                <td><?php echo $linhas['matricula']; ?></td>
+                                <td><?php echo $linhas['nome']; ?></td>
+                                <td><?php echo $linhas['funcao']; ?></td>
                                 <td><?php echo $linhas['congregacao']; ?></td>
                                 <td><?php echo $linhas['dataCadastro']; ?></td>
                                 <td>                                   
-                                <img id="img_foto" src="../patrimonio/img_patrimonio/<?php echo $linhas['arquivo'];?>">
+                                <img id="img_foto" width="25" height="20" src="../ponto/img_qrcode/<?php echo $linhas['arquivo'];?>">
                                 </td>
                                 <td>                                   
-                                    <a href="procedimento_excluir_patrimonio.php?id_patrimonio=<?php echo $linhas['id_patrimonio']; ?>"><img src="../imagens/diversas_imagens/excluir.png"width="25" height="20"></a>
-                                </td>
-                                <td>                                   
-                                    <a href="tela_alterar_patrimonio.php?id_patrimonio=<?php echo $linhas['id_patrimonio']; ?>"><img src="../imagens/diversas_imagens/editar.png"width="25" height="20"></a>
+                                    <a href="procedimento_excluir_ponto.php?matricula=<?php echo $linhas['matricula']; ?>"><img src="../imagens/diversas_imagens/excluir.png"width="25" height="20"></a>
                                 </td>
                             </tr>
                             <?php

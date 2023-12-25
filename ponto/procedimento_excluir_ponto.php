@@ -20,10 +20,10 @@ require '../db/config.php';
 //Caso o usuário não esteja autenticado, limpa os dados e redireciona
 
 
-$id_patrimonio		= $_GET["id_patrimonio"];
+$matricula		= $_GET["matricula"];
 
 
-$sql = "DELETE FROM  patrimonio  WHERE  id_patrimonio = $id_patrimonio";
+$sql = "DELETE FROM  ponto  WHERE  matricula = $matricula";
 $sql =$pdo->query($sql);
 
 
@@ -38,13 +38,13 @@ $sql =$pdo->query($sql);
 		<?php
 		if ($sql->rowCount() != 0 ){	
 			echo "
-				<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=tela_lista_patrimonio.php'>
+				<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=tela_lista_ponto.php'>
 				<div id='status' class='alert alert-success'></div>
 			";		   
 		}
 		 else{ 	
 				echo "
-				<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=tela_lista_patrimonio.php'>
+				<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=tela_lista_ponto.php'>
 				<div id='status' class='alert alert-danger'></div>
 			";		   
 

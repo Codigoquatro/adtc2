@@ -68,6 +68,9 @@ require_once "db/config.php";
         <a href="eventos/tela_cadastro.php" class="nav-link">Cadastro de Eventos</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
+        <a href="usuario/tela_cad_usuario.php" class="nav-link">Gestão de Usuários</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Usuario: <?php echo $_SESSION['nome']?></a>
       </li>
     </ul>
@@ -151,7 +154,7 @@ require_once "db/config.php";
                 </a>
               </li>
               <li class="nav-item">
-                <a href="ponto/tela_gerarQRcode.php" class="nav-link active">
+                <a href="ponto/buscar.php" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Ponto</p>
                 </a>

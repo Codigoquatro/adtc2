@@ -16,10 +16,29 @@ if (!isset($_SESSION['nome']) || !isset($_SESSION['senha'])) {
 
 require '../db/config.php';
 
-if (isset($_POST['nome']) && !empty($_POST['nome'])) {
+if (isset($_POST['matricula']) && !empty($_POST['matricula'])) {
+    $matricula = addslashes($_POST['matricula']);
     $nome = addslashes($_POST['nome']);
-    $dataAtual = addslashes($_POST['dataAtual']);
+    $funcao = addslashes($_POST['funcao']);
     $congregacao = addslashes($_POST['congregacao']);
+
+
+    // Verifica se a matrícula já existe
+    $consultaMatricula = $pdo->prepare("SELECT COUNT(*) as total FROM ponto WHERE matricula = :matricula");
+    $consultaMatricula->bindValue(':matricula', $matricula);
+    $consultaMatricula->execute();
+    $result = $consultaMatricula->fetch(PDO::FETCH_ASSOC);
+
+    if ($result['total'] > 0) {
+        echo "
+            <script type=\"text/javascript\">
+                alert(\"Matrícula já cadastrada. Não é permitido cadastrar a mesma matrícula mais de uma vez.\");
+                window.location.href = 'buscar.php';
+            </script>
+        ";
+        exit;
+    }
+    
     
     $arquivo = $_FILES['arquivo'];
     
@@ -43,7 +62,7 @@ if (isset($_POST['nome']) && !empty($_POST['nome'])) {
         echo "
             <script type=\"text/javascript\">
                 alert(\"O arquivo não foi cadastrado. Extensão inválida.\");
-                window.location.href = 'tela_cadastro.php';
+                window.location.href = 'buscar.php';
             </script>
         ";
         exit;
@@ -54,7 +73,7 @@ if (isset($_POST['nome']) && !empty($_POST['nome'])) {
         echo "
             <script type=\"text/javascript\">
                 alert(\"Arquivo muito grande.\");
-                window.location.href = 'tela_cadastro.php';
+                window.location.href = 'buscar.php';
             </script>
         ";
         exit;
@@ -67,21 +86,21 @@ if (isset($_POST['nome']) && !empty($_POST['nome'])) {
     if (move_uploaded_file($arquivo['tmp_name'], $pasta . $nomeArquivo)) {
         // Inserção no banco de dados
         $data = date('Y-m-d');
-        $sql = "INSERT INTO patrimonio (descricao, qtde, congregacao, dataCadastro, arquivo)
-                VALUES ('$descricao', '$qtde', '$congregacao', '$data', '$nomeArquivo')";
+        $sql = "INSERT INTO ponto(matricula,nome,funcao, congregacao, dataCadastro, arquivo)
+                VALUES ('$matricula', '$nome', '$funcao','$congregacao', '$data', '$nomeArquivo')";
         
         if ($pdo->exec($sql)) {
             echo "
                 <script type=\"text/javascript\">
-                    alert(\"Qrcode cadastrado com sucesso.\");
-                    window.location.href = 'tela_cadastro.php';
+                    alert(\"Qrcode do filiado cadastrado com sucesso.\");
+                    window.location.href = 'buscar.php';
                 </script>
             ";
         } else {
             echo "
                 <script type=\"text/javascript\">
-                    alert(\"Qrcode não foi cadastrado.\");
-                    window.location.href = 'tela_cadastro.php';
+                    alert(\"Qrcode do filiado não foi cadastrado.\");
+                    window.location.href = 'buscar.php';
                 </script>
             ";
         }
@@ -89,7 +108,7 @@ if (isset($_POST['nome']) && !empty($_POST['nome'])) {
         echo "
             <script type=\"text/javascript\">
                 alert(\"Erro ao fazer o upload do arquivo.\");
-                window.location.href = '../view/tela_cadastro.php';
+                window.location.href = 'buscar.php';
             </script>
         ";
     }

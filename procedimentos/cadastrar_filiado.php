@@ -39,13 +39,7 @@ $uf                  = $_POST['uf'];
 $telefone            = $_POST['telefone'];
 $email               = $_POST['email'];
 $status              = $_POST['status'];
-
-
-
-$arquivo=$_FILES['arquivo']['name'];
-
-
-
+$arquivo             = $_FILES['arquivo']['name'];
 			
 			//Pasta onde o arquivo vai ser salvo
 			$_UP['pasta'] = '../imagens/';
@@ -124,12 +118,10 @@ $arquivo=$_FILES['arquivo']['name'];
 				}
 			}
 			
-$sql = "SELECT * FROM filiado WHERE nome ='$nome' ";
+$sql = "SELECT * FROM filiado WHERE nome = '$nome' AND documento = '$documento'";
 $sql = $pdo->query($sql);
 
 if ($sql->rowCount() >= 1){
-
-
 echo "
 				<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=../view/tela_cad_filiado.php'>
 				<script type=\"text/javascript\">
