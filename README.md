@@ -1,4 +1,2 @@
-# Sistem adtc2
-# Project_adtc2_2023
-# Project_adtc2_2023
-# adtc2
+## Sistema para secretarias de igrejas
+### Busca otimizar o trabalho de gestão de filiados.
