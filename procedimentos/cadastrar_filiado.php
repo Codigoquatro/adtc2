@@ -20,6 +20,7 @@ require '../db/config.php';
 
 
 $nome                = $_POST['nome']; 
+$nome_carteira       = $_POST['nome_carteira'];
 $funcao              = $_POST['funcao'];
 $congregacao         = $_POST['congregacao'];
 $documento           = $_POST['documento'];
@@ -132,7 +133,7 @@ echo "
 $data		= date('Y-m-d');
 $arquivo=$_FILES['arquivo']['name'];
 
-$sql = "INSERT INTO filiado SET nome='$nome',funcao='$funcao',congregacao='$congregacao',documento='$documento',dataNascimento='$dataNascimento',dataBatismo='$dataBatismo',data_Consagracao='$data_Consagracao',estadoCivil='$estadoCivil',mae='$mae',pai='$pai',logradouro='$logradouro',endereco='$endereco',numero='$numero',bairro='$bairro',cep='$cep',cidade='$cidade',uf='$uf',telefone='$telefone',email='$email',status='$status',datCadastro='$data',arquivo='$arquivo'";
+$sql = "INSERT INTO filiado SET nome='$nome',nome_carteira ='$nome_carteira',funcao='$funcao',congregacao='$congregacao',documento='$documento',dataNascimento='$dataNascimento',dataBatismo='$dataBatismo',data_Consagracao='$data_Consagracao',estadoCivil='$estadoCivil',mae='$mae',pai='$pai',logradouro='$logradouro',endereco='$endereco',numero='$numero',bairro='$bairro',cep='$cep',cidade='$cidade',uf='$uf',telefone='$telefone',email='$email',status='$status',datCadastro='$data',arquivo='$arquivo'";
  $sql = $pdo->query($sql);
 
  ?>

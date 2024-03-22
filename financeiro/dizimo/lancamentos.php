@@ -106,6 +106,14 @@ require_once "../../db/config.php";
                 </a>
               </li>                   
             </ul>
+            <ul class="nav nav-treeview">           
+           <li class="nav-item">
+             <a href="tela_relatorio_dizimo.php" class="nav-link active">
+               <i class="far fa-circle nav-icon"></i>
+               <p>Consultar Total</p>
+             </a>
+           </li>                   
+         </ul>
           </li>         
       </nav>       
     </div>

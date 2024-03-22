@@ -22,13 +22,6 @@ $pdf->getOptions()->set('title', 'Agenda de Eventos');
 $pdf->getOptions()->set('defaultFont', 'helvetica');
 
 $html = '';
-$html .= '<form method="get" action="">';
-$html .= '<label for="data_inicio">Data de Início:</label>';
-$html .= '<input type="date" name="data_inicio" id="data_inicio">';
-$html .= '<label for="data_fim">Data de Término:</label>';
-$html .= '<input type="date" name="data_fim" id="data_fim">';
-$html .= '<input type="submit" value="Gerar Relatório">';
-$html .= '</form>';
 
 if (isset($_GET['data_inicio']) && isset($_GET['data_fim'])) {
     $data_inicio = $_GET['data_inicio'];
@@ -85,8 +78,13 @@ if (isset($_GET['data_inicio']) && isset($_GET['data_fim'])) {
         // Renderize o PDF
         $pdf->render();
 
+        // Defina o cabeçalho para forçar o download do PDF
+        header('Content-Type: application/pdf');
+        header('Content-Disposition: attachment; filename="Eventos.pdf"');
+
         // Saída do PDF como um arquivo para download
-        $pdf->stream('Eventos.pdf', ['Attachment' => false]);
+        echo $pdf->output();
+        exit;
     } else {
         $html .= '<p>Nenhum evento encontrado no período especificado.</p>';
     }

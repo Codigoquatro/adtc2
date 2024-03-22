@@ -62,7 +62,7 @@ if ($sql->rowCount() > 0) {
         $html .= '<tr>';
         $html .= '<td>' . $linhas["id_ofertas"] . '</td>';
         $html .= '<td>' . date("d/m/Y", strtotime($linhas["dataOferta"])) . '</td>';
-        $html .= '<td>' . $linhas["valor"] . '</td>';
+        $html .= '<td>R$ ' . number_format($linhas["valor"], 2, ',', '.') . '</td>';
         $html .= '<td>' . $linhas["congregacao"] . '</td>';
         $html .= '<td>' . $linhas["responsavel"] . '</td>';
         $html .= '</tr>';
@@ -98,7 +98,7 @@ foreach ($sumByCongregationAndMonth as $congregation => $sumsByMonth) {
         echo '<tr>';
         echo '<td>' . $congregation . '</td>';
         echo '<td>' . date("M", strtotime($mesAno . '-01')) . '</td>';
-        echo '<td>' . $soma . '</td>';
+        echo '<td>R$ ' . number_format($soma, 2, ',', '.') . '</td>';
         echo '</tr>';
     }
 }
@@ -107,5 +107,6 @@ echo '</table>';
 
 // Exibir a soma geral
 echo '<br><h2>Soma Geral:</h2>';
-echo '<p>' . $totalGeral . '</p>';
+echo '<p>R$ ' . number_format($totalGeral, 2, ',', '.') . '</p>';
 ?>
+

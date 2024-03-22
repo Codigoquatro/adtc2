@@ -38,10 +38,10 @@ if ( !isset($_SESSION['nome']) and !isset($_SESSION['senha']) ) {
 </head>
 <body>
   <nav class="navbar navbar-dark bg-dark">
-    <a href="https://codigoquatro.com.br/adtc2/index.php" class="navbar-brand">Gerar relatorios</a>
+    <a href="lancamentos.php" class="navbar-brand">Gerar relatorios dízimos</a>
   </nav>
   <div class="container">
-   <form novalidate class="needs-validation" action="relatorios_dizimo.php"  method="GET">
+   <form novalidate class="needs-validation" action="../frente.php"  method="GET">
     <div class="form-row">     
         <div class="col form-group">       
         <label for="nome">Data inicial</label>
@@ -56,7 +56,7 @@ if ( !isset($_SESSION['nome']) and !isset($_SESSION['senha']) ) {
     </div><!-- end div-form-row-->
     <div class="form-row">     
         <div class="col form-group">       
-        <label for="nome">Listar dizimistas</label>
+        <label for="nome">Congregação</label>
            <input  style="text-align: center;"  type="text" name="congregacao" class="form-control is-valid" id="qtde" value="<?php echo $_SESSION['nome'];?>" required>
         </div>
     </div><!-- end div-form-row-->
@@ -65,7 +65,7 @@ if ( !isset($_SESSION['nome']) and !isset($_SESSION['senha']) ) {
  
     </div><!-- end div-form-group-row-->  
 
-    <button type="submit" class="btn btn-primary btn-block">Gerar Relatório Pdf</button>  
+    <button type="submit" class="btn btn-primary btn-block">Filtrar</button>  
     <a href="tela_relatorio_dizimo_excel.php" type="submit" class="btn btn-primary btn-block">Gerar Relatório em Excel</a>    
    </form><!-- end form-->
   </div><!-- end div-container-->

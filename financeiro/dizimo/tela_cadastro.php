@@ -44,10 +44,11 @@ if ( !isset($_SESSION['nome']) and !isset($_SESSION['senha']) ) {
    <form novalidate class="needs-validation" action="procedimento_cad_dizimo.php"  method="POST" enctype="multipart/form-data">
 
     <div class="form-row">        
-        <div class="col form-group">
-           <label for="nome">Nome</label>
-           <input type="text" name="nome" class="form-control is-valid" id="descricao" required>
-        </div>
+    <div class="col form-group">
+      <label for="nome">Nome</label>
+      <input type="text" name="nome" class="form-control is-valid" id="descricao" required oninput="this.value = this.value.toUpperCase();">
+    </div>
+
     </div><!-- end div-form-row-->  
     <div class="form-row">        
         <div class="col form-group">

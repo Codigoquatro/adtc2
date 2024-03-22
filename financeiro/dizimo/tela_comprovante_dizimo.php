@@ -50,7 +50,7 @@ if ( !isset($_SESSION['nome']) and !isset($_SESSION['senha']) ) {
   <nav style="margin-left:50px;">
     <a href="#" onclick="window.print();" style="text-decoration:none;">
         <p id="texto_imprimir" ><?php echo rand(1,10)."   |  "."Imprimir";?></p>
-    </a><a href="tela_cadastro.php">Voltar</a>
+    </a><a href="lancamentos.php">Voltar</a>
   </nav>
   <div class="conteiner">
   <div class="texto2_diz">

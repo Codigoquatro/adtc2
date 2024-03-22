@@ -38,7 +38,7 @@ if ( !isset($_SESSION['nome']) and !isset($_SESSION['senha']) ) {
 </head>
 <body>
   <nav class="navbar navbar-dark bg-dark">
-    <a href="https://codigoquatro.com.br/adtc2/index.php" class="navbar-brand">Gerar relatorios</a>
+    <a href="lancamentos.php" class="navbar-brand">Gerar relatorios</a>
   </nav>
   <div class="container">
    <form novalidate class="needs-validation" action="relatorioexceldizimo.php"  method="GET">

@@ -58,7 +58,7 @@ require_once "../db/config.php";
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-      <a href="https://codigoquatro.com.br/adtc2/index_tesoureiro.php" class="nav-link">Menu</a>
+      <a href="../index_tesoureiro.php" class="nav-link">Menu</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Tesoureiros</a>        
@@ -76,7 +76,7 @@ require_once "../db/config.php";
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="../index.php" class="brand-link">
+    <a href="../index_tesoureiro.php" class="brand-link">
       <img src="../imagens/img_carteira/logo sem fundo.png" alt="ADTC II" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">ADTC System</span>
@@ -98,27 +98,22 @@ require_once "../db/config.php";
               </p>
             </a>
             <ul class="nav nav-treeview">
+           
               <li class="nav-item">
-                <a href="painel_entradas.php" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Entrada</p>
-                </a>
-              </li>             
-               <li class="nav-item">
-                <a href="painel_saida.php" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Saida</p>
-                </a>
-              </li>
-
-
-              <li class="nav-item">
-                <a href="sair.php" class="nav-link active">
+                <a href="../sair.php" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Sair</p>
                 </a>
               </li>                   
             </ul>
+            <ul class="nav nav-treeview">           
+           <li class="nav-item">
+             <a href="../frente.php" class="nav-link active">
+               <i class="far fa-circle nav-icon"></i>
+               <p>Total</p>
+             </a>
+           </li>                   
+         </ul>
           </li>         
       </nav>       
     </div>
@@ -144,55 +139,21 @@ require_once "../db/config.php";
         <div class="row">
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-danger">
+            <div class="small-box bg-success">
               <div class="inner">
-                <h4>Relatórios</h4>
+                <h4>Visualizar</h4>
 
-                <p>Mensal</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
               </div>
-              <a href="tela_relatorio_ofertas_sede.php" class="small-box-footer">Visualizar Ofertas Lançados<i class="fas fa-arrow-circle"></i></a>
+              <a href="../dizimo/tela_pesquisar_dizimo.php" class="small-box-footer">Dízimos Lançados<i class="fas fa-arrow-circle"></i></a>
             </div>
           </div>
           <!-- ./col -->
          
         </div> 
-        <div class="row">
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-              <h4>Relatórios</h4>
 
-                <p>Mensal</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-bag"></i>
-              </div>
-              <a href="tela_dizimos_lancados_sede.php" class="small-box-footer">Visualizar Dizimos Lançados<i class="fas fa-arrow-circle"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-         
-        </div> 
-        <div class="row">
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-              <h4>Relatórios</h4>
-
-                <p>Mensal</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-bag"></i>
-              </div>
-              <a href="tela_relatorio_saidas_sede.php" class="small-box-footer">Visualizar Saídas Lançadas<i class="fas fa-arrow-circle"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
          
         </div>     
         </div>    
@@ -223,37 +184,22 @@ require_once "../db/config.php";
         <div class="row">
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-danger">
+            <div class="small-box bg-primary">
               <div class="inner">
-                <h4>Entradas</h4>
-
-                <p>Mensal</p>
+                <h4>Lançamento</h4>
+              
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
               </div>
-              <a href="painel_entradas.php" class="small-box-footer">Lançar Entradas<i class="fas fa-arrow-circle"></i></a>
+              <a href="tela_cadastro.php" class="small-box-footer">Dízimos<i class="fas fa-arrow-circle"></i></a>
             </div>
           </div>
           <!-- ./col -->
          
         </div> 
         <div class="row">
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-              <h4>Saídas</h4>
 
-                <p>Mensal</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-bag"></i>
-              </div>
-              <a href="painel_saida.php" class="small-box-footer">Lançar Saídas<i class="fas fa-arrow-circle"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
          
         </div> 
     
@@ -311,3 +257,4 @@ require_once "../db/config.php";
 <script src="dist/js/demo.js"></script>
 </body>
 </html>
+
